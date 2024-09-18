@@ -98,9 +98,9 @@ class ApiService {
 
 const apiService = new ApiService('http://localhost:3000');
 
-apiService.getProducts().then(data => console.log(data)); // Отримати всі продукти
-apiService.getProducts(1).then(data => console.log(data)); // Отримати продукт за id
-apiService.addProduct({ name: 'product4', param: 'param4' }).then(data => console.log(data)); // Додати новий продукт
-apiService.updateProduct(1, { name: 'updatedProduct', param: 'updatedParam' }).then(data => console.log(data)); // Оновити продукт
-apiService.deleteProduct(3).then(data => console.log(data)); // Видалити продукт
-apiService.addProduct({ name: 'product4', param: 'param4' }).then(data => console.log(data)); // Додати новий продукт
+apiService.getProducts().then(data => console.log(data)); 
+apiService.getProducts(1).then(data => console.log(data)); 
+apiService.addProduct({ name: 'product4', param: 'param4' }).then(data => console.log(data)); 
+apiService.updateProduct(1, { name: 'updatedProduct', param: 'updatedParam' }).then(data => console.log(data)); 
+apiService.deleteProduct(3).then(data => console.log(data));
+apiService.addProduct({ name: 'product4', param: 'param4' }).then(data => console.log(data)); 
