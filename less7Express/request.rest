@@ -1,0 +1,15 @@
+GET http://localhost:3000/products HTTP/1.1
+
+###
+
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+  "title":"laprop",
+  "price":90000
+}
+
+###
+
+GET http://localhost:3000/products/4 HTTP/1.1
