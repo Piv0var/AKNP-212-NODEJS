@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management</title>
+</head>
+<body>
+  <h1>Product Management</h1>
+
+  <h2>Add Product</h2>
+  <form id="add-form">
+    <input type="text" name="title" id="add-title" placeholder="Title" required />
+    <input type="number" name="price" id="add-price" placeholder="Price" required />
+    <button type="submit">Add product</button>
+  </form>
+
+  <h2>Product List</h2>
+  <ul id="product-list"></ul>
+
+  <h2>Edit Product</h2>
+  <form id="edit-form">
+    <input type="hidden" id="edit-id" />
+    <input type="text" name="title" id="edit-title" placeholder="Title" required />
+    <input type="number" name="price" id="edit-price" placeholder="Price" required />
+    <button type="submit">Update product</button>
+    <button type="button" id="cancel-edit">Cancel</button>
+  </form>
+  <script src="/js/index.js"></script>
+</body>
+</html>

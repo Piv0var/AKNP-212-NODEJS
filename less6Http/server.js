@@ -51,7 +51,6 @@ const server = http.createServer((req, res) => {
 
     case "/login":
       if (req.method === 'GET') {
-        // Повертаємо сторінку з формою логіну
         res.write(
           fs.readFileSync(
             path.join(import.meta.dirname, "public", "pages", "login.html")
@@ -59,7 +58,6 @@ const server = http.createServer((req, res) => {
         );
         res.end();
       } else if (req.method === 'POST') {
-        // Обробляємо POST запит з форми
         let body = '';
         req.on('data', chunk => {
           body += chunk.toString();
@@ -68,8 +66,6 @@ const server = http.createServer((req, res) => {
         req.on('end', () => {
           const postData = querystring.parse(body);
           log(`Username: ${postData.username}, Password: ${postData.password}`);
-
-          // Відповідаємо користувачу
           res.writeHead(200, { "Content-Type": "text/html" });
           res.write('<h1>Авторизація виконана успішно</h1>');
           res.end();
