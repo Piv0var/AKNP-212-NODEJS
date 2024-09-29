@@ -1,7 +1,7 @@
 import express from "express";
 import { products } from "./data/products.js";
 import path from "node:path";
-
+import createProduct from "./middlewares/product-middleware.js"
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +23,14 @@ app.get('/products/:id', (req, res) => {
     return res.status(404).send("Product not found");
   }
   res.status(200).json(product);
+});
+app.post('/products', createProduct, (req, res) => {
+  products.push(req.new_product);
+  res.status(200).json(req.new_product);
+});
+
+app.all("*", (req,res) => {
+  res.status(404).send();
 });
 
 app.post('/', (req, res) => {
