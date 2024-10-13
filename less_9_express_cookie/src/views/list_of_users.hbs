@@ -1,0 +1,30 @@
+{{#if existUsers}}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Login</th>
+      <th scope="col">Email</th>
+      <th scope="col">Avatar</th> 
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+      <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{login}}</td>
+        <td>{{email}}</td>
+        <td>
+          {{#if imagePath}} 
+              <img src="/{{user.imagePath}}" alt="User Avatar" style="width:40px; height:auto; border-radius:50%;">
+          {{else}}
+            No avatar
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+  <p>No data</p>
+{{/if}}

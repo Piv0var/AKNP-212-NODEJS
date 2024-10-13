@@ -1,25 +1,21 @@
 {
-  "name": "aknp-212-nodejs",
+  "name": "less9expresscookie",
   "version": "1.0.0",
-  "description": "project 1",
-  "type": "module",
+  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "js",
-    "node"
-  ],
-  "author": "Ivan Vlasihin <ivlasikhin7@gmail.com>",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "chalk": "^5.3.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "express-handlebars": "^8.0.1",
-    "json-server": "^1.0.0-beta.2"
+    "validator": "^13.12.0"
   }
 }

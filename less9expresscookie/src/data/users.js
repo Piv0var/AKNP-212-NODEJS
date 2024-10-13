@@ -1,0 +1,1 @@
+export const users = [{id: 1, login:"ivan", password:"$2b$10$gor1wwnAwuBr8Pfv.1D6zucoymhtzZo0rGoIS5wZl933dzn9vSg/a"}];
